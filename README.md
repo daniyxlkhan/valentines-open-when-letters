@@ -2,7 +2,7 @@
 
 ![Preview](preview.png)
 
-A heartfelt "Open When" letters web app for your loved one. Create a personalized collection of letters that can be opened at different moments - when they miss you, need motivation, want to smile, or on special dates like Valentine's Day.
+A heartfelt "Open When" letters web app for your loved one. Create a personalized collection of letters that can be opened at different moments - when they miss you, need motivation, want to smile, or on special dates. Includes a special Valentine's Day letter that automatically unlocks at midnight on February 14th!
 
 ## Quick Start
 
@@ -35,7 +35,10 @@ For detailed customization instructions, see **[CUSTOMIZATION.md](CUSTOMIZATION.
 
 - 💌 **12 Unique Letters** - Different letters for different moments
 - 🔒 **Password Protected** - Secure login to access the letters
-- 📅 **Time-Locked Letter** - Special Valentine's Day letter that unlocks on a specific date
+- ⏰ **Valentine's Day Timer** - Special letter that automatically unlocks on February 14th at midnight
+  
+  <p align="center"><img src="valentineTimer.png" width="400" /></p>
+  
 - 📊 **Progress Tracking** - Remembers which letters have been opened
 - 🎙️ **Voice Notes** - Optional audio messages for each letter
 - 📸 **Photo Integration** - Add personal photos to each letter
