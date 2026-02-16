@@ -1,0 +1,207 @@
+.letter-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.letter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.letter-card.locked {
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  cursor: default;
+}
+
+.letter-card.just-unlocked {
+  animation: gentleUnlock 3s ease-in-out;
+  background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 50%, #ffd6e0 100%);
+  cursor: pointer;
+}
+
+@keyframes gentleUnlock {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  20% {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4), 0 0 30px rgba(255, 105, 180, 0.3);
+  }
+  40% {
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5), 0 0 40px rgba(255, 105, 180, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+  }
+}
+
+.letter-card.opened {
+  opacity: 0.7;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d84315;
+}
+
+.letter-card h3 {
+  font-size: 1.1rem;
+  color: #5d4037;
+  font-weight: 500;
+}
+
+.opened-badge {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: #4caf50;
+  color: white;
+  border-radius: 12px;
+  font-size: 0.75rem;
+}
+
+.countdown-on-card {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.countdown-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  font-weight: bold;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-num {
+  font-size: 1.5rem;
+  color: #d84315;
+  line-height: 1;
+}
+
+.countdown-text {
+  font-size: 0.65rem;
+  color: #8d6e63;
+  text-transform: uppercase;
+  margin-top: 0.1rem;
+}
+
+.countdown-sep {
+  font-size: 1.2rem;
+  color: #d84315;
+  margin: 0 0.1rem;
+  padding-bottom: 0.8rem;
+}
+
+.unlock-celebration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.unlock-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.4) 0%, transparent 70%);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
+.falling-petals {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.petal {
+  position: absolute;
+  top: -20px;
+  font-size: 1.2rem;
+  animation: petalFall linear forwards;
+  opacity: 0;
+}
+
+@keyframes petalFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(200px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.unlock-message {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #d84315;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: slideUpMessage 2s ease forwards;
+  white-space: nowrap;
+}
+
+@keyframes slideUpMessage {
+  0% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+  20%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
