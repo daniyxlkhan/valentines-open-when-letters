@@ -256,7 +256,7 @@ Don't ever forget that. ❤️`,
     title: "Opens on Valentine's Night",
     category: "locked",
     isLocked: true,
-    unlockDate: "2027-02-14T00:00:00", // Valentine's Day 2027
+    unlockDate: "2026-02-14T00:00:00", // Valentine's Day 2026
     hasVoiceNote: false, // Set to true when you add voice-note-12.mp3
     hasPhoto: false, // Set to true when you add photo-12.jpg
     content: `Happy Valentine's Day!
