@@ -37,7 +37,7 @@ For detailed customization instructions, see **[CUSTOMIZATION.md](CUSTOMIZATION.
 - 🔒 **Password Protected** - Secure login to access the letters
 - ⏰ **Valentine's Day Timer** - Special letter that automatically unlocks on February 14th at midnight
   
-  <p align="center"><img src="valentineTimer.png" width="400" /></p>
+  <p align="center"><img src="valentinetimer.png" width="400" /></p>
   
 - 📊 **Progress Tracking** - Remembers which letters have been opened
 - 🎙️ **Voice Notes** - Optional audio messages for each letter
